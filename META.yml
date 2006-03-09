@@ -1,0 +1,23 @@
+---
+name: Text-AutoLink
+version: 0.01
+author:
+  - Daisuke Maki E<lt>dmaki@cpan.orgE<gt>. All rights reserved.
+abstract: Automatically Linkfy
+license: perl
+requires:
+  HTML::TreeBuilder: 0
+  Module::Pluggable: 0
+provides:
+  Text::AutoLink:
+    file: lib/Text/AutoLink.pm
+    version: 0.01
+  Text::AutoLink::Plugin:
+    file: lib/Text/AutoLink/Plugin.pm
+  Text::AutoLink::Plugin::FTP:
+    file: lib/Text/AutoLink/Plugin/FTP.pm
+  Text::AutoLink::Plugin::HTTP:
+    file: lib/Text/AutoLink/Plugin/HTTP.pm
+  Text::AutoLink::Plugin::Mailto:
+    file: lib/Text/AutoLink/Plugin/Mailto.pm
+generated_by: Module::Build version 0.2611
