@@ -1,4 +1,4 @@
-# $Id: Plugin.pm 1 2006-03-09 02:26:29Z daisuke $
+# $Id: Plugin.pm 2 2006-03-09 08:49:21Z daisuke $
 #
 # Copyright (c) 2006 Daisuke Maki <dmaki@cpan.org>
 # All rights reserved.
@@ -48,7 +48,7 @@ Text::AutoLink::Plugin - Base Class For Text::AutoLink Plugin
 
 =head1 DESCRIPTION
 
-Base class for Text::AutoLink Plugin.
+Base class for Text::AutoLink Plugin. 
 
 =head1 METHODS
 
@@ -68,6 +68,8 @@ You can specify the "target" attribute of the resulting link here
 
 This method must be overridden in the subclass. It receives a scalar ref,
 which is the text that you should be modifying.
+
+Returns false if not replacement was performed. Returns true otherwise.
 
 =head2 linkfy ARGS
 

@@ -1,6 +1,6 @@
 ---
 name: Text-AutoLink
-version: 0.01
+version: 0.02
 author:
   - Daisuke Maki E<lt>dmaki@cpan.orgE<gt>. All rights reserved.
 abstract: Automatically Linkfy
@@ -11,9 +11,11 @@ requires:
 provides:
   Text::AutoLink:
     file: lib/Text/AutoLink.pm
-    version: 0.01
+    version: 0.02
   Text::AutoLink::Plugin:
     file: lib/Text/AutoLink/Plugin.pm
+  Text::AutoLink::Plugin::CPAN:
+    file: lib/Text/AutoLink/Plugin/CPAN.pm
   Text::AutoLink::Plugin::FTP:
     file: lib/Text/AutoLink/Plugin/FTP.pm
   Text::AutoLink::Plugin::HTTP:

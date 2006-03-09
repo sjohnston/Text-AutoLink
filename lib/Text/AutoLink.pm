@@ -1,4 +1,4 @@
-# $Id: AutoLink.pm 1 2006-03-09 02:26:29Z daisuke $
+# $Id: AutoLink.pm 3 2006-03-09 08:49:37Z daisuke $
 #
 # Copyright (c) 2006 Daisuke Maki <dmaki@cpan.org>
 # All rights reserved.
@@ -14,7 +14,7 @@ use Module::Pluggable
 ;
 
 BEGIN {
-    $VERSION = '0.01'
+    $VERSION = '0.02'
 }
 
 sub new

@@ -1,0 +1,9 @@
+Changes
+=======
+
+0.02 - 09 Mar 2006
+  - Add Plugin::CPAN (e.g. cpan://Text::AutoLink)
+  - Actually add a Changes file (oops)
+
+0.01 - 09 Mar 2006
+  - Initial release

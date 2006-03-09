@@ -27,6 +27,7 @@ my $build = $class->new(
         'Module::Pluggable' => 0,
     },
     license => 'perl',
+    recursive_test_files => 1,
     create_readme => 1,
     create_makefile_pl => 'traditional',
 );
