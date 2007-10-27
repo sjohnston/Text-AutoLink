@@ -1,10 +1,12 @@
-# $Id: AutoLink.pm 3 2006-03-09 08:49:37Z daisuke $
+# $Id: /mirror/perl/Text-AutoLink/trunk/lib/Text/AutoLink.pm 4209 2007-10-27T13:37:24.097523Z daisuke  $
 #
 # Copyright (c) 2006 Daisuke Maki <dmaki@cpan.org>
 # All rights reserved.
 
 package Text::AutoLink;
 use strict;
+use warnings;
+use 5.006;
 use vars qw($VERSION);
 use HTML::TreeBuilder;
 use Module::Pluggable
@@ -14,7 +16,7 @@ use Module::Pluggable
 ;
 
 BEGIN {
-    $VERSION = '0.02'
+    $VERSION = '0.03000'
 }
 
 sub new
@@ -174,14 +176,19 @@ Parses the given file handle.
 
 =head1 CAVEATS
 
-This is alpha quality release. Proceed at your own peril. Patches, ideas welcome.
-
 Text::AutoLink internally uses HTML::TreeBuilder, so the resulting text may
 slightly be different from the input. In my experience this is usually not
 a problem, but if you are being strict it may bite you.
 
 =head1 AUTHOR
 
-Daisuke Maki E<lt>dmaki@cpan.orgE<gt>. All rights reserved.
+Copyright (c) 2006-2007 Daisuke Maki E<lt>daisuke@endeworks.jp<gt>. 
+
+=head1 LICENSE
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+See http://www.perl.com/perl/misc/Artistic.html
 
 =cut

@@ -1,6 +1,10 @@
 Changes
 =======
 
+0.03000 - 27 Oct 2007
+  - Switch to Module::Install
+  - Add warnings
+
 0.02 - 09 Mar 2006
   - Add Plugin::CPAN (e.g. cpan://Text::AutoLink)
   - Actually add a Changes file (oops)

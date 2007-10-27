@@ -1,10 +1,11 @@
-# $Id: FTP.pm 1 2006-03-09 02:26:29Z daisuke $
+# $Id: /mirror/perl/Text-AutoLink/trunk/lib/Text/AutoLink/Plugin/FTP.pm 4207 2007-10-27T13:33:47.814555Z daisuke  $
 #
 # Copyright (c) 2006 Daisuke Maki <dmaki@cpan.org>
 # All rights reserved.
 
 package Text::AutoLink::Plugin::FTP;
 use strict;
+use warnings;
 use base qw(Text::AutoLink::Plugin);
 
 sub process
