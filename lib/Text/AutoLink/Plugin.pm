@@ -24,12 +24,18 @@ sub linkfy
     my $self = shift;
     my %args = @_;
 
+    my $text = $args{text} || $args{href};
+
+    if ($args{img}) {
+        $text = sprintf('<img src="%s">', $args{img});
+    }
+
     my $target = exists $args{target} ? ($args{target} || '') : $self->{target};
     if ($target) {
         $target = qq| target="$target"|;
     }
     return sprintf('<a href="%s"%s>%s</a>',
-        $args{href}, $target, $args{text} || $args{href});
+        $args{href}, $target, $text);
 }
 
 1;
