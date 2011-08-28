@@ -17,7 +17,7 @@ sub linkfy
         $self->SUPER::linkfy(href => "http://twitpic.com/$id", img => "http://twitpic.com/show/thumb/$id");
     }
     else {
-        $self->SUPER::linkfy(href => $1)
+        $self->SUPER::linkfy(href => $url)
     }
 }
 
