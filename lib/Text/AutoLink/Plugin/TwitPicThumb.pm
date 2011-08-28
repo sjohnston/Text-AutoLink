@@ -1,27 +1,21 @@
-# Copyright (c) 2006 Daisuke Maki <dmaki@cpan.org>
-# All rights reserved.
-
 package Text::AutoLink::Plugin::TwitPicThumb;
 use strict;
 use warnings;
-use base qw(Text::AutoLink::Plugin);
+use base qw(Text::AutoLink::Plugin::HTTP);
 
-sub process
+sub linkfy
 {
     my $self = shift;
-    my $ref  = shift;
+    my %args = @_;
 
-    $$ref =~ s/https?:\/\/twitpic.com\/([a-z0-9]+)/
-        $self->twitpic($1)
-    /gex;
-}
-
-sub twitpic
-{
-    my $self = shift;
-    my $id   = shift;
-
-    $self->linkfy(href => "http://twitpic.com/$id", img => "http://twitpic.com/show/thumb/$id");
+    my $url = $args{href};
+    my ($id) = $url =~ /https?:\/\/twitpic.com\/([a-z0-9]+)/;
+    if ($id) {
+        $self->SUPER::linkfy(href => "http://twitpic.com/$id", img => "http://twitpic.com/show/thumb/$id");
+    }
+    else {
+        $self->SUPER::linkfy(href => $1)
+    }
 }
 
 1;
